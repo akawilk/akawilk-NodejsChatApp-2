@@ -1,0 +1,10 @@
+ version: '3.3'
+ services:
+  snake:
+    image: 'akawilk90/nodejschatapp'
+    environment:
+     - "PORT:3700"
+    ports:
+     - "3700:3700"
+    volumes:
+     - ./:/app
