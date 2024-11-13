@@ -14,7 +14,7 @@ stage('SCA-SAST-SNYK-TEST')
 
     snykSecurity(
         snykInstallation:'Snyk',
-        snykTokenId: 'synk_api',
+        snykTokenId: 'Synkid',
         severity: 'critical'
     )
 
