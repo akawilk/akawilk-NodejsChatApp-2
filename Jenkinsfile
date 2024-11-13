@@ -12,12 +12,6 @@ stage('Cloning Git')
 stage('SCA-SAST-SNYK-TEST')
 {
 
-    snykSecurity(
-        snykInstallation:'Snyk',
-        snykTokenId: 'Synkid',
-        severity: 'critical'
-    )
-
 }
 
 stage('Build-And-Tag-')
@@ -48,7 +42,17 @@ stage('Pull-Image-Run-App') {
         fi
         '''
 }
- 
+
+ {
+
+  
+    snykSecurity(
+        snykInstallation:'Snyk',
+        snykTokenId: 'Synkid',
+        severity: 'critical'
+    )
+
+ }
 stage('Deploy')
 {
     sh "docker-compose down"
