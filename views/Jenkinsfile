@@ -8,6 +8,7 @@ stage('Cloning Git')
     checkout scm
 }
 
+
 stage('SCA-SAST-SNYK-TEST')
 {
 
